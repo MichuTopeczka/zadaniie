@@ -1,0 +1,12 @@
+SELECT `ryby`.`nazwa`, `ryby`.`wystepowanie`, `ryby`.`styl_zycia`
+FROM `ryby`
+WHERE `ryby`.`styl_zycia` = '1';
+
+
+SELECT `okres_ochronny`.`Ryby_id`, `okres_ochronny`.`wymiar_ochronny`
+FROM `okres_ochronny`
+WHERE `okres_ochronny`.`wymiar_ochronny` < '50';
+
+$sql = "SELECT nazwa, wystepowanie FROM `ryby` WHERE styl_zycia = 1";
+
+ALTER TABLE `ryby` ADD `dobowy_limit` INT NOT NULL AFTER `styl_zycia`;
